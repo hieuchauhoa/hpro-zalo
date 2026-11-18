@@ -1,0 +1,38 @@
+# ==============================================================================
+# HPro Zalo Web (`hpro-zalo-web`) — Zero-Server-Persistence Docker Compose
+# ==============================================================================
+#
+# Quick start:
+#   docker compose up -d
+#   # Optional shared edge passphrase:
+#   HPROZALO_WEB_TOKEN="your-secret-passphrase" docker compose up -d
+#
+# Zero-persistence guarantee:
+#   `hpro-zalo-web` runs with `read_only: true`, `cap_drop: [ALL]`, `no-new-privileges`,
+#   `core: 0`, and ZERO volumes or writable directories. All login cookies (`zpw_sek`),
+#   vault keys, OPFS files, and chat history stay 100% inside your browser.
+# ==============================================================================
+
+services:
+  hpro-zalo-web:
+    image: hieuchauhoa/hpro-zalo:latest
+    container_name: hpro-zalo-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    read_only: true
+    user: "65532:65532"
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    ulimits:
+      core: 0
+    environment:
+      HPROZALO_WEB_LISTEN: "0.0.0.0:8080"
+      HPROZALO_ASAR_PATH: "/opt/hpro-zalo/app.asar"
+      HPROZALO_WEB_TOKEN: "${HPROZALO_WEB_TOKEN:-${OLAZ_WEB_TOKEN:-}}"
+      RUST_LOG: "${RUST_LOG:-info}"
+    ports:
+      - "${HPROZALO_WEB_BIND:-${OLAZ_WEB_BIND:-127.0.0.1:8080}}:8080"
+    restart: unless-stopped

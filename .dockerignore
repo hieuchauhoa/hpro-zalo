@@ -1,0 +1,16 @@
+target/
+dist/
+macos/
+docs/
+packaging/
+pkgbuild/
+bin/
+.git/
+.github/
+.claude/
+.gemini/
+*.dmg
+*.pkg.tar*
+*.deb
+*.AppImage
+*.run

@@ -1,0 +1,2053 @@
+{
+ "table": {
+  "$zwindow.minimize": {
+   "channel": "minimize",
+   "type": "REQUEST"
+  },
+  "$zwindow.maximizeToggler": {
+   "channel": "toggle-maximize",
+   "type": "REQUEST"
+  },
+  "$zwindow.setLoginSize": {
+   "channel": "set-login-size",
+   "type": "REQUEST"
+  },
+  "$zwindow.expandMainWindow": {
+   "channel": "main-window-expand",
+   "type": "REQUEST"
+  },
+  "$zwindow.isMaximized": {
+   "channel": "check-maximize",
+   "type": "REQUEST"
+  },
+  "$zwindow.isFullScreen": {
+   "channel": "check-fullscreen",
+   "type": "REQUEST"
+  },
+  "$zwindow.fullscreenToggler": {
+   "channel": "toggle-fullscreen",
+   "type": "REQUEST"
+  },
+  "$zwindow.flashFrame": {
+   "channel": "flash-frame",
+   "type": "REQUEST"
+  },
+  "$zwindow.focus": {
+   "channel": "focus-window",
+   "type": "REQUEST"
+  },
+  "$zwindow.closeWindow": {
+   "channel": "close-window",
+   "type": "REQUEST"
+  },
+  "$zwindow.hide": {
+   "channel": "hide-window",
+   "type": "REQUEST"
+  },
+  "$zwindow.setContentProtection": {
+   "channel": "set-content-protection",
+   "type": "REQUEST"
+  },
+  "$zwindow.showInactive": {
+   "channel": "show-inactive",
+   "type": "REQUEST"
+  },
+  "$zwindow.show": {
+   "channel": "show",
+   "type": "REQUEST"
+  },
+  "$zwindow.quit": {
+   "channel": "quit",
+   "type": "REQUEST"
+  },
+  "$zwindow.showOpenDialog": {
+   "channel": "show-open-dialog",
+   "type": "REQUEST"
+  },
+  "$zwindow.showSaveDialog": {
+   "channel": "show-save-dialog",
+   "type": "REQUEST"
+  },
+  "$zwindow.showOpenDialogSync": {
+   "channel": "show-open-dialog-sync",
+   "type": "REQUEST"
+  },
+  "$zwindow.showSaveDialogSync": {
+   "channel": "show-save-dialog-sync",
+   "type": "REQUEST"
+  },
+  "$zwindow.onVisibilityChange": {
+   "channel": "visibility-change",
+   "type": "SUBSCRIBE"
+  },
+  "$zwindow.removeListenVisibilityChange": {
+   "channel": "visibility-change",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zwindow.onHideWindowComplete": {
+   "channel": "hide-window-complete",
+   "type": "SUBSCRIBE"
+  },
+  "$zwindow.removeListenHideWindowComplete": {
+   "channel": "hide-window-complete",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zwindow.openPhotoViewerDevtool": {
+   "channel": "open-photo-viewer-devtool",
+   "type": "REQUEST"
+  },
+  "$zwindow.onUnloadZLog": {
+   "channel": "unload-zlog",
+   "type": "SUBSCRIBE"
+  },
+  "$zwindow.removeListenUnloadZLog": {
+   "channel": "unload-zlog",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zwindow.onCloseMediaViewer": {
+   "channel": "close-media-viewer",
+   "type": "SUBSCRIBE"
+  },
+  "$zwindow.removeListenCloseMediaViewer": {
+   "channel": "close-media-viewer",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zresource.getPhotoviewerUrl": {
+   "channel": "get-photo-viewer-url",
+   "type": "REQUEST"
+  },
+  "$zresource.getChildUrl": {
+   "channel": "get-child-url",
+   "type": "REQUEST"
+  },
+  "$zresource.onClipboardChange": {
+   "channel": "clipboard-change",
+   "type": "SUBSCRIBE"
+  },
+  "$zresource.removeListenClipboardChange": {
+   "channel": "clipboard-change",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zresource.onRequestImei": {
+   "channel": "get-imei",
+   "type": "PROVIDE"
+  },
+  "$zresource.removeListenRequestImei": {
+   "channel": "get-imei",
+   "type": "STOP_PROVIDE"
+  },
+  "$zresource.getResourceDir": {
+   "channel": "get-resource-dir",
+   "type": "REQUEST"
+  },
+  "$zresource.onCheckIdleUpdaterBusy": {
+   "channel": "check-updater-busy",
+   "type": "PROVIDE"
+  },
+  "$zresource.removeListenCheckIdleUpdateBusy": {
+   "channel": "check-updater-busy",
+   "type": "STOP_PROVIDE"
+  },
+  "$zresource.getRecentFiles": {
+   "channel": "get-recent-file",
+   "type": "REQUEST"
+  },
+  "$zresource.authError": {
+   "channel": "get-auth-domain",
+   "type": "NOTIFY"
+  },
+  "$zresource.getAuthDomainReady": {
+   "channel": "get-auth-domain-ready",
+   "type": "NOTIFY"
+  },
+  "$zresource.getAuthDomainReply": {
+   "channel": "get-auth-domain-reply",
+   "type": "PROVIDE"
+  },
+  "$zresource.onBackupAppState": {
+   "channel": "backup-app-state",
+   "type": "PROVIDE"
+  },
+  "$zresource.removeListenBackupAppState": {
+   "channel": "backup-app-state",
+   "type": "STOP_PROVIDE"
+  },
+  "$zresource.onRestoreAppState": {
+   "channel": "restore-app-state",
+   "type": "PROVIDE"
+  },
+  "$zresource.removeListenRestoreAppState": {
+   "channel": "restore-app-state",
+   "type": "STOP_PROVIDE"
+  },
+  "$zlogger.crossQosLog": {
+   "channel": "cross_OS_LOG_QOS",
+   "type": "REQUEST"
+  },
+  "$zlogger.crossQosConfig": {
+   "channel": "cross_OS_LOG_QOS_config",
+   "type": "NOTIFY"
+  },
+  "$zlogger.notifyOsCloseMain": {
+   "channel": "signal_OS_CLOSE_MAIN",
+   "type": "NOTIFY"
+  },
+  "$zlogger.notifyQosReady": {
+   "channel": "cross_OS_LOG_QOS_READY",
+   "type": "NOTIFY"
+  },
+  "$zlogger.onQosLog": {
+   "channel": "cross_OS_LOG_QOS",
+   "type": "SUBSCRIBE"
+  },
+  "$zlogger.onActionLog999": {
+   "channel": "cross_ACTION_LOG_999_CHANNEL",
+   "type": "SUBSCRIBE"
+  },
+  "$zlogger.removeListenActionLog999": {
+   "channel": "cross_ACTION_LOG_999_CHANNEL",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zlogger.removeListenQosLog": {
+   "channel": "cross_OS_LOG_QOS",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zlogger.notifyActionLogReady": {
+   "channel": "cross_OS_LOG_ACTION_READY",
+   "type": "NOTIFY"
+  },
+  "$zlogger.onActionLog": {
+   "channel": "cross_OS_LOG_ACTION",
+   "type": "SUBSCRIBE"
+  },
+  "$zlogger.removeListenActionLog": {
+   "channel": "cross_OS_LOG_ACTION",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zlogger.onMainUncaughtError": {
+   "channel": "main-process-uncaught-error",
+   "type": "SUBSCRIBE"
+  },
+  "$zlogger.removeListenMainUncaughtError": {
+   "channel": "main-process-uncaught-error",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zlogger.sendLog": {
+   "channel": "log",
+   "type": "NOTIFY"
+  },
+  "$zlogger.sendLogGa": {
+   "channel": "log-ga",
+   "type": "NOTIFY"
+  },
+  "$zlogger.sendViewerkey": {
+   "channel": "receive-viewerkey",
+   "type": "NOTIFY"
+  },
+  "$zlogger.onReceiveViewerkey": {
+   "channel": "receive-viewerkey",
+   "type": "SUBSCRIBE"
+  },
+  "$zlogger.removeListenViewerkey": {
+   "channel": "receive-viewerkey",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zlogger.loadShellQos": {
+   "channel": "load-shell-qos",
+   "type": "REQUEST"
+  },
+  "$zlogger.checkRecentCrash": {
+   "channel": "check-recently-crash",
+   "type": "REQUEST"
+  },
+  "$zupdater.requestUpdate": {
+   "channel": "update-is-avail",
+   "type": "REQUEST"
+  },
+  "$zupdater.requestCheckUpdate": {
+   "channel": "z-check-for-update",
+   "type": "NOTIFY"
+  },
+  "$zupdater.onNewUpdate": {
+   "channel": "binary-updated",
+   "type": "SUBSCRIBE"
+  },
+  "$zupdater.onNewManualUpdate": {
+   "channel": "z-manual-binary-updated",
+   "type": "SUBSCRIBE"
+  },
+  "$zupdater.onFallbackUpdate": {
+   "channel": "fallback-update",
+   "type": "SUBSCRIBE"
+  },
+  "$zupdater.removeListenNewUpdate": {
+   "channel": "binary-updated",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zupdater.removeListenNewManualUpdate": {
+   "channel": "z-manual-binary-updated",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zupdater.removeListenFallbackUpdate": {
+   "channel": "fallback-update",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zupdater.onResourceUpdate": {
+   "channel": "resources-updated",
+   "type": "SUBSCRIBE"
+  },
+  "$zupdater.removeResourceUpdate": {
+   "channel": "update-is-avail",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zupdater.onManualUpdateInstalling": {
+   "channel": "z-manual-update-installing",
+   "type": "SUBSCRIBE"
+  },
+  "$zupdater.removeListenManualUpdateInstalling": {
+   "channel": "z-manual-update-installing",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zupdater.onManualUpdateDownloading": {
+   "channel": "z-manual-update-downloading",
+   "type": "SUBSCRIBE"
+  },
+  "$zupdater.removeListenManualUpdateDownloading": {
+   "channel": "z-manual-update-downloading",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zupdater.onManualUpdateChecked": {
+   "channel": "z-manual-update-checked",
+   "type": "SUBSCRIBE"
+  },
+  "$zupdater.removeListenManualUpdateChecked": {
+   "channel": "z-manual-update-checked",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zupdater.onManualUpdateCheckedOnly": {
+   "channel": "z-manual-update-checked-only",
+   "type": "SUBSCRIBE"
+  },
+  "$zupdater.removeListenManualUpdateCheckedOnly": {
+   "channel": "z-manual-update-checked-only",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zupdater.onManualUpdateCheckOnlyErr": {
+   "channel": "z-manual-update-checked-only-err",
+   "type": "SUBSCRIBE"
+  },
+  "$zupdater.removeListenManualUpdateCheckOnlyErr": {
+   "channel": "z-manual-update-checked-only-err",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zupdater.onManualUpdateErr": {
+   "channel": "z-manual-update-err",
+   "type": "SUBSCRIBE"
+  },
+  "$zupdater.removeListenManualUpdateErr": {
+   "channel": "z-manual-update-err",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zupdater.requestCheckDownloadUpdate": {
+   "channel": "z-manual-check-download-update",
+   "type": "RAW_SEND"
+  },
+  "$zupdater.requestCheckDownloadUpdateOnly": {
+   "channel": "z-manual-check-download-update-only",
+   "type": "NOTIFY"
+  },
+  "$zupdater.requestResourceReload": {
+   "channel": "resources-reload-safe",
+   "type": "NOTIFY"
+  },
+  "$zupdater.requestBinaryReload": {
+   "channel": "binary-reload-safe",
+   "type": "NOTIFY"
+  },
+  "$zupdater.requestManualBinaryReload": {
+   "channel": "manual-binary-reload-safe",
+   "type": "NOTIFY"
+  },
+  "$zupdater.openUpdatePage": {
+   "channel": "OPEN_UPDATE_PAGE",
+   "type": "NOTIFY"
+  },
+  "$zupdater.onReceiveUpdateInfo": {
+   "channel": "receive-update-info",
+   "type": "SUBSCRIBE_ONCE"
+  },
+  "$zupdater.onUncaughtError": {
+   "channel": "updater-uncaught-error",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zupdater.removeListenUncaughtError": {
+   "channel": "updater-uncaught-error",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.notifyRendererReady": {
+   "channel": "renderer-ready",
+   "type": "NOTIFY"
+  },
+  "$zapp.notifyAppStarted": {
+   "channel": "app-started",
+   "type": "NOTIFY"
+  },
+  "$zapp.onRequestShowAbout": {
+   "channel": "about",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.onRequestShowPreference": {
+   "channel": "preferences",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenShowAbout": {
+   "channel": "about",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.removeListenShowPreference": {
+   "channel": "preferences",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.beforeAppQuit": {
+   "channel": "app-before-quit",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenBeforeAppQuit": {
+   "channel": "app-before-quit",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.beforeAppClose": {
+   "channel": "before-close",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenBeforeAppClose": {
+   "channel": "before-close",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.checkNetworkTimeout": {
+   "channel": "CHECK_NETWORK_TIMEOUT_ERR",
+   "type": "REQUEST"
+  },
+  "$zapp.requestShowFromTray": {
+   "channel": "show-from-tray",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenRequestShowFromTray": {
+   "channel": "show-from-tray",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.notifyClickNoti": {
+   "channel": "noti-click",
+   "type": "NOTIFY"
+  },
+  "$zapp.onClickNoti": {
+   "channel": "noti-click",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenClickNoti": {
+   "channel": "noti-click",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.onRequestRestartAppForBackup": {
+   "channel": "bu-ask-restart",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenBackupRestartReq": {
+   "channel": "bu-ask-restart",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.notifyDbFail": {
+   "channel": "signal-db-fail",
+   "type": "NOTIFY"
+  },
+  "$zapp.notifyDbCorruption": {
+   "channel": "signal-db-corruption",
+   "type": "NOTIFY"
+  },
+  "$zapp.requestHideBeforeQuit": {
+   "channel": "z-hide-app-before-quit",
+   "type": "RAW_SEND"
+  },
+  "$zapp.onOsRequestRestart": {
+   "channel": "os-force-restart",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenOsRestart": {
+   "channel": "os-force-restart",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.requestQuitAppImmediately": {
+   "channel": "do-quit",
+   "type": "REQUEST"
+  },
+  "$zapp.cancelQuitApp": {
+   "channel": "cancel-quit",
+   "type": "REQUEST"
+  },
+  "$zapp.osConfirmRestart": {
+   "channel": "os-confirm-restart",
+   "type": "REQUEST"
+  },
+  "$zapp.restartByZAM": {
+   "channel": "ZAM_RESET_DB",
+   "type": "REQUEST"
+  },
+  "$zapp.onConfirmAppQuit": {
+   "channel": "before-quit",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenConfirmAppQuit": {
+   "channel": "before-quit",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.onNetErr": {
+   "channel": "znet-error-code",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenNetErr": {
+   "channel": "znet-error-code",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.onRequestShowOpenFile": {
+   "channel": "zfile-popup",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenShowOpenFile": {
+   "channel": "zfile-popup",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.onReceiveArgument": {
+   "channel": "receive-arguments",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenReceiveArguments": {
+   "channel": "receive-arguments",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.onShowToastFromMain": {
+   "channel": "show-toast-from-main",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenToastFromMain": {
+   "channel": "show-toast-from-main",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.registerProcess": {
+   "channel": "zmain_register_process",
+   "type": "NOTIFY"
+  },
+  "$zapp.onPing": {
+   "channel": "zping",
+   "type": "PROVIDE"
+  },
+  "$zapp.removeListenPing": {
+   "channel": "zping",
+   "type": "STOP_PROVIDE"
+  },
+  "$zapp.requestCreateNoti": {
+   "channel": "noti-create",
+   "type": "REQUEST"
+  },
+  "$zapp.onRequestShowNoti": {
+   "channel": "noti-create",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.notifyNotiReady": {
+   "channel": "noti-ready",
+   "type": "REQUEST"
+  },
+  "$zapp.notifyRelaunchMode": {
+   "channel": "receive-relaunch-mode",
+   "type": "RAW_SEND"
+  },
+  "$zapp.changeLanguage": {
+   "channel": "language-change",
+   "type": "RAW_SEND"
+  },
+  "$zapp.enableNetHandler": {
+   "channel": "enable-net-handler",
+   "type": "REQUEST"
+  },
+  "$zapp.updateCurrentUserId": {
+   "channel": "ChatApp-receive-userId",
+   "type": "RAW_SEND"
+  },
+  "$zapp.getProxyConfig": {
+   "channel": "proxy-get",
+   "type": "REQUEST"
+  },
+  "$zapp.setProxyConfig": {
+   "channel": "proxy-set",
+   "type": "RAW_SEND"
+  },
+  "$zapp.updateBadgeCount": {
+   "channel": "badge-count",
+   "type": "REQUEST"
+  },
+  "$zapp.updateCertConfig": {
+   "channel": "cert-config",
+   "type": "NOTIFY"
+  },
+  "$zapp.beforeAppRestartSilently": {
+   "channel": "app-before-restart-silently",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenBeforeAppRestartSilently": {
+   "channel": "app-before-restart-silently",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.afterAppRestartSilently": {
+   "channel": "app-after-restart-silently",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenAfterAppRestartSilently": {
+   "channel": "app-after-restart-silently",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.registerIdleCheckInterval": {
+   "channel": "register-idle-check-interval",
+   "type": "NOTIFY"
+  },
+  "$zapp.onStartIdle": {
+   "channel": "start-idle",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenStartIdle": {
+   "channel": "start-idle",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.onEndIdle": {
+   "channel": "end-idle",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenEndIdle": {
+   "channel": "end-idle",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.setMainWindowResizable": {
+   "channel": "set-main-window-resizable",
+   "type": "NOTIFY"
+  },
+  "$zapp.onListenSwitchTab": {
+   "channel": "switch_tab",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.requestRelaunch": {
+   "channel": "request_relaunch",
+   "type": "REQUEST"
+  },
+  "$zapp.onAppVisibilityChanged": {
+   "channel": "app-visibility-change",
+   "type": "SUBSCRIBE"
+  },
+  "$zapp.removeListenAppVisibilityChanged": {
+   "channel": "app-visibility-change",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zapp.getAppVisibilityStatus": {
+   "channel": "get-app-visibility",
+   "type": "REQUEST"
+  },
+  "$zdownload.sendDownloadRequest": {
+   "channel": "new-download-channel",
+   "type": "REQUEST"
+  },
+  "$zdownload.onDownloadResp": {
+   "channel": "new-download-channel",
+   "type": "SUBSCRIBE"
+  },
+  "$zdownload.removeListenDownloadResp": {
+   "channel": "new-download-channel",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zdownload.updateDownloadConfig": {
+   "channel": "download-config-change",
+   "type": "REQUEST"
+  },
+  "$zdownload.updateInvalidFileExts": {
+   "channel": "invalid-file-exts-change",
+   "type": "REQUEST"
+  },
+  "$zdownload.downloadThumbTemp": {
+   "channel": "download-thumb-temp",
+   "type": "REQUEST"
+  },
+  "$zdownload.onDownloadQuotaHit": {
+   "channel": "download-quota-hit",
+   "type": "SUBSCRIBE"
+  },
+  "$zdownload.removeListenDownloadQuotaHit": {
+   "channel": "download-quota-hit",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zdb.sendRequest": {
+   "channel": "shared-worker-req-events",
+   "type": "REQUEST"
+  },
+  "$zdb.processRequest": {
+   "channel": "shared-worker-req-events",
+   "type": "SUBSCRIBE"
+  },
+  "$zdb.removeListenNewRequest": {
+   "channel": "shared-worker-req-events",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zdb.sendResponse": {
+   "channel": "shared-worker-resp-events",
+   "type": "REQUEST"
+  },
+  "$zdb.processResponse": {
+   "channel": "shared-worker-resp-events",
+   "type": "SUBSCRIBE"
+  },
+  "$zdb.removeListenNewResponse": {
+   "channel": "shared-worker-resp-events",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zdb.onFailedLoadSqlite": {
+   "channel": "fail-load-sqlite3",
+   "type": "SUBSCRIBE"
+  },
+  "$zdb.checkFailedLoadSqlite": {
+   "channel": "fail-load-sqlite3",
+   "type": "REQUEST"
+  },
+  "$zdb.updateAvailableSqliteState": {
+   "channel": "status-load-sqlite3",
+   "type": "NOTIFY"
+  },
+  "$zdb.notifyOpenDBFailed": {
+   "channel": "db-open-fail",
+   "type": "NOTIFY"
+  },
+  "$zdb.authenticateDb": {
+   "channel": "db-authenticated",
+   "type": "NOTIFY"
+  },
+  "$zdb.onReceiveSession": {
+   "channel": "db-authenticated",
+   "type": "SUBSCRIBE"
+  },
+  "$zdb.removeListenNewSession": {
+   "channel": "db-authenticated",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zdb.notifyDbConnected": {
+   "channel": "db-client-connected",
+   "type": "NOTIFY"
+  },
+  "$zdb.requestCloseDbs": {
+   "channel": "db-start-close-dbs",
+   "type": "NOTIFY"
+  },
+  "$zdb.onRequestCloseDbs": {
+   "channel": "db-start-close-dbs",
+   "type": "SUBSCRIBE"
+  },
+  "$zdb.removeListenRequestCloseDbs": {
+   "channel": "db-start-close-dbs",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zdb.notifyFinishCloseDb": {
+   "channel": "db-finish-close-dbs",
+   "type": "NOTIFY"
+  },
+  "$zdb.abortSyncMsg": {
+   "channel": "sync-msg-abort",
+   "type": "NOTIFY"
+  },
+  "$zdb.getIDBDatabaseHealthStatus": {
+   "channel": "z-db-corruption-detector",
+   "type": "REQUEST"
+  },
+  "$zdb.canIUseSQLite": {
+   "channel": "sqlite-available",
+   "type": "REQUEST"
+  },
+  "$zdb.showSQLite": {
+   "channel": "show-sqlite",
+   "type": "NOTIFY"
+  },
+  "$zdb.getNameOfTargetScriptForDALChannelFromHost": {
+   "channel": "get-name-of-target-script-for-dal-channel-from-host",
+   "type": "REQUEST"
+  },
+  "$zsessionManager.authenticate": {
+   "channel": "new-session",
+   "type": "NOTIFY"
+  },
+  "$zsessionManager.onReceiveSession": {
+   "channel": "new-session",
+   "type": "SUBSCRIBE"
+  },
+  "$zsessionManager.removeListenReceiveSession": {
+   "channel": "new-session",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zmulti.onChildWindowClose": {
+   "channel": "CHILD_WINDOW_CLOSED",
+   "type": "SUBSCRIBE"
+  },
+  "$zmulti.removeListenChildWindowClose": {
+   "channel": "CHILD_WINDOW_CLOSED",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zmulti.closeAllChilds": {
+   "channel": "close-all-childs",
+   "type": "REQUEST"
+  },
+  "$zcall.onRequestCallFromServer": {
+   "channel": "call-server-request",
+   "type": "SUBSCRIBE"
+  },
+  "$zcall.removeListenRequestCallFromServer": {
+   "channel": "call-server-request",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zcall.onRequestCallFromLocal": {
+   "channel": "call-local-request",
+   "type": "SUBSCRIBE"
+  },
+  "$zcall.removeListenRequestCallFromLocal": {
+   "channel": "call-local-request",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zcall.onCallUpdate": {
+   "channel": "call-update",
+   "type": "SUBSCRIBE"
+  },
+  "$zcall.removeListenCallUpdate": {
+   "channel": "call-update",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zcall.onCallActiveNative": {
+   "channel": "call_active_native_app",
+   "type": "SUBSCRIBE"
+  },
+  "$zcall.removeListenCallActiveNative": {
+   "channel": "call_active_native_app",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zcall.onPcShuttingDown": {
+   "channel": "pc-shutting-down",
+   "type": "SUBSCRIBE"
+  },
+  "$zcall.removeListenPcShuttingDown": {
+   "channel": "pc-shutting-down",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zcall.onStopSharing": {
+   "channel": "stop-sharing",
+   "type": "SUBSCRIBE"
+  },
+  "$zcall.removeListenStopSharing": {
+   "channel": "stop-sharing",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zcall.onCallSignal": {
+   "channel": "call-send-signal",
+   "type": "SUBSCRIBE"
+  },
+  "$zcall.removeListenCallSignal": {
+   "channel": "call-send-signal",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zcall.onCallRequest": {
+   "channel": "call-request",
+   "type": "SUBSCRIBE"
+  },
+  "$zcall.removeListenCallRequest": {
+   "channel": "call-request",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zcall.initCall": {
+   "channel": "call-init",
+   "type": "RAW_SEND"
+  },
+  "$zcall.sendDataToNative": {
+   "channel": "call-send-to-native",
+   "type": "RAW_SEND"
+  },
+  "$zcall.onCallResponseDevices": {
+   "channel": "call-response-listDevice",
+   "type": "SUBSCRIBE_ONCE"
+  },
+  "$zcall.removeListenCallDevices": {
+   "channel": "call-response-listDevice",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zsharedWorker.show": {
+   "channel": "show-shared-worker",
+   "type": "NOTIFY"
+  },
+  "$zsharedWorker.hide": {
+   "channel": "hide-shared-worker",
+   "type": "NOTIFY"
+  },
+  "$zsharedWorker.start": {
+   "channel": "shared-worker-start",
+   "type": "NOTIFY"
+  },
+  "$zsharedWorker.register": {
+   "channel": "shared-worker-handle",
+   "type": "NOTIFY"
+  },
+  "$zsharedWorker.ping": {
+   "channel": "shared-worker-ping",
+   "type": "NOTIFY"
+  },
+  "$zsharedWorker.dispose": {
+   "channel": "shared-worker-dispose",
+   "type": "NOTIFY"
+  },
+  "$zsharedWorker.updateProgress": {
+   "channel": "shared-worker-progress",
+   "type": "NOTIFY"
+  },
+  "$zsharedWorker.onReceiveUpdateProgress": {
+   "channel": "shared-worker-progress",
+   "type": "SUBSCRIBE"
+  },
+  "$zsharedWorker.removeListenUpdateProgress": {
+   "channel": "shared-worker-progress",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zsharedWorker.responseResult": {
+   "channel": "shared-worker-resp",
+   "type": "NOTIFY"
+  },
+  "$zsharedWorker.onReceiveResult": {
+   "channel": "shared-worker-resp",
+   "type": "SUBSCRIBE"
+  },
+  "$zsharedWorker.removeListenResult": {
+   "channel": "shared-worker-resp",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zsharedWorker.runTask": {
+   "channel": "shared-worker-run",
+   "type": "NOTIFY"
+  },
+  "$zsharedWorker.onRequestRunTask": {
+   "channel": "shared-worker-run",
+   "type": "SUBSCRIBE"
+  },
+  "$zsharedWorker.removeListenRunTask": {
+   "channel": "shared-worker-run",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zsharedWorker.abortTask": {
+   "channel": "shared-worker-abort",
+   "type": "NOTIFY"
+  },
+  "$zsharedWorker.onRequestAbortTask": {
+   "channel": "shared-worker-abort",
+   "type": "SUBSCRIBE"
+  },
+  "$zsharedWorker.removeListenAbortTask": {
+   "channel": "shared-worker-abort",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zsharedWorker.updateTaskParams": {
+   "channel": "shared-worker-update-params",
+   "type": "NOTIFY"
+  },
+  "$zsharedWorker.onRequestUpdateTaskParams": {
+   "channel": "shared-worker-update-params",
+   "type": "SUBSCRIBE"
+  },
+  "$zsharedWorker.removeListenUpdateTaskParams": {
+   "channel": "shared-worker-update-params",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zsharedWorker.onUnloadZLog": {
+   "channel": "unload-zlog",
+   "type": "SUBSCRIBE"
+  },
+  "$zsharedWorker.removeListenUnloadZLog": {
+   "channel": "unload-zlog",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zsharedWorker.updateRemoteConfig": {
+   "channel": "shared-worker-remote-config-change",
+   "type": "NOTIFY"
+  },
+  "$zsharedWorker.onRemoteConfigChange": {
+   "channel": "shared-worker-remote-config-change",
+   "type": "SUBSCRIBE"
+  },
+  "$zsharedWorker.removeListenRemoteConfigChange": {
+   "channel": "shared-worker-remote-config-change",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zelectron.getAppPath": {
+   "channel": "_electron_get-app-path",
+   "type": "REQUEST"
+  },
+  "$zelectron.getAppPathSync": {
+   "channel": "_electron_get-app-path-sync",
+   "type": "REQUEST_SYNC"
+  },
+  "$zelectron.getPath": {
+   "channel": "_electron_get-path",
+   "type": "REQUEST"
+  },
+  "$zelectron.getPathSync": {
+   "channel": "_electron_get-path-sync",
+   "type": "REQUEST_SYNC"
+  },
+  "$zelectron.getAppVersion": {
+   "channel": "_electron_get-app-version",
+   "type": "REQUEST"
+  },
+  "$zelectron.setCookie": {
+   "channel": "_electron_set-cookie",
+   "type": "REQUEST"
+  },
+  "$zelectron.setAppCookie": {
+   "channel": "_electron_set-app-cookie",
+   "type": "REQUEST"
+  },
+  "$zelectron.clearCookie": {
+   "channel": "_electron_clear-cookie",
+   "type": "REQUEST"
+  },
+  "$zelectron.clearHostResolverCache": {
+   "channel": "_electron_clear-host-cache",
+   "type": "REQUEST"
+  },
+  "$zelectron.clearSessionStorageData": {
+   "channel": "_electron_clear-session-storage",
+   "type": "REQUEST"
+  },
+  "$zelectron.clearSessionCache": {
+   "channel": "_electron_clear-session-cache",
+   "type": "REQUEST"
+  },
+  "$zelectron.openDevTool": {
+   "channel": "_electron_open-devtool",
+   "type": "REQUEST"
+  },
+  "$zelectron.enableWinContextMenu": {
+   "channel": "_electron_enable-win-context-menu",
+   "type": "REQUEST"
+  },
+  "$zelectron.takeHeapSnapshotAndZip": {
+   "channel": "_electron_take-heap-snapshot-and-zip",
+   "type": "REQUEST"
+  },
+  "$zelectron.getInfoScreenOfMouseSync": {
+   "channel": "_electron_get-info-screen-of-mouse-sync",
+   "type": "REQUEST_SYNC"
+  },
+  "$zuri.onNewRequest": {
+   "channel": "z-uri-request",
+   "type": "SUBSCRIBE"
+  },
+  "$zuri.removeListenNewRequest": {
+   "channel": "z-uri-request",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zuri.onRequestOpenConv": {
+   "channel": "z-uri-open-conv",
+   "type": "SUBSCRIBE"
+  },
+  "$zuri.removeListenRequestOpenConv": {
+   "channel": "z-uri-open-conv",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zuri.checkOpenConvReq": {
+   "channel": "check-startup-open-conv-request",
+   "type": "REQUEST"
+  },
+  "$zuri.checkArgvLink": {
+   "channel": "check-arg-link",
+   "type": "RAW_SEND"
+  },
+  "$zscreencap.start": {
+   "channel": "screen-capture",
+   "type": "REQUEST"
+  },
+  "$zscreencap.getClipboard": {
+   "channel": "get-clipboard",
+   "type": "REQUEST"
+  },
+  "$zscreencap.restart": {
+   "channel": "restart-cap",
+   "type": "REQUEST"
+  },
+  "$zscreencap.rewriteClipboard": {
+   "channel": "rewrite-clipboard",
+   "type": "REQUEST"
+  },
+  "$zscreencap.onChangeStatus": {
+   "channel": "change-screencap-status",
+   "type": "SUBSCRIBE"
+  },
+  "$zscreencap.removeListenChangeStatus": {
+   "channel": "change-screencap-status",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zscreencap.onScreenshotShortcut": {
+   "channel": "screenshot-shortcut-result",
+   "type": "SUBSCRIBE"
+  },
+  "$zscreencap.removeScreenshotShortcut": {
+   "channel": "screenshot-shortcut-result",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zscreencap.onStartScreenCapture": {
+   "channel": "start-screen-capture",
+   "type": "SUBSCRIBE"
+  },
+  "$zscreencap.removeListenStartScreenCapture": {
+   "channel": "start-screen-capture",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zscreencap.onScreenCapture": {
+   "channel": "screen-capture-shortcut",
+   "type": "SUBSCRIBE"
+  },
+  "$zscreencap.removeListenScreenCapture": {
+   "channel": "screen-capture-shortcut",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zscreencap.onCaptureAccept": {
+   "channel": "screen-capture-response-accept",
+   "type": "SUBSCRIBE"
+  },
+  "$zscreencap.removeListenCaptureAccept": {
+   "channel": "screen-capture-response-accept",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zscreencap.onCaptureNoPermission": {
+   "channel": "screen-capture-response-no-permission",
+   "type": "SUBSCRIBE"
+  },
+  "$zscreencap.removeListenCaptureNoPermission": {
+   "channel": "screen-capture-response-no-permission",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zscreencap.onEventOs": {
+   "channel": "event-os-changed",
+   "type": "SUBSCRIBE"
+  },
+  "$zscreencap.removeListenEventOs": {
+   "channel": "event-os-changed",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zscreencap.onSend2Me": {
+   "channel": "screen-capture-response-send2me",
+   "type": "SUBSCRIBE"
+  },
+  "$zscreencap.removeListenSend2Me": {
+   "channel": "screen-capture-response-send2me",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zscreencap.onForwardScreencap": {
+   "channel": "forward_screencap",
+   "type": "SUBSCRIBE"
+  },
+  "$zscreencap.removeListenForwardScreencap": {
+   "channel": "forward_screencap",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zscreencap.onForwardScreencapText": {
+   "channel": "forward_screencap_text",
+   "type": "SUBSCRIBE"
+  },
+  "$zscreencap.removeListenForwardScreencapText": {
+   "channel": "forward_screencap_text",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zscreencap.onWarningInstallRosetta": {
+   "channel": "warning_install_rosetta",
+   "type": "SUBSCRIBE"
+  },
+  "$zscreencap.removeListenWarningInstallRosetta": {
+   "channel": "warning_install_rosetta",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zlogin.login": {
+   "channel": "login",
+   "type": "RAW_SEND"
+  },
+  "$zlogin.updateLoginStep": {
+   "channel": "login-step",
+   "type": "RAW_SEND"
+  },
+  "$zlogin.loginAfterInstall": {
+   "channel": "login-after-install",
+   "type": "RAW_SEND"
+  },
+  "$zlogin.onUserNotLogged": {
+   "channel": "signal_USER_NOT_LOGGED_IN",
+   "type": "SUBSCRIBE"
+  },
+  "$zlogin.removeListenUserNotLogged": {
+   "channel": "signal_USER_NOT_LOGGED_IN",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zlogin.notifyLoginSuccess": {
+   "channel": "login-success",
+   "type": "REQUEST"
+  },
+  "$zlogin.onLoginSuccess": {
+   "channel": "login-success",
+   "type": "SUBSCRIBE"
+  },
+  "$zlogin.removeListenLoginSuccess": {
+   "channel": "login-success",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zlogin.onRequestShowAbout": {
+   "channel": "about",
+   "type": "SUBSCRIBE"
+  },
+  "$zlogin.removeListenShowAbout": {
+   "channel": "about",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zperf.getCpuInfos": {
+   "channel": "get-cpu-infos",
+   "type": "REQUEST"
+  },
+  "$zperf.getProcessInfos": {
+   "channel": "get-process-info",
+   "type": "REQUEST"
+  },
+  "$zperf.crash": {
+   "channel": "z-simulate-crash-main",
+   "type": "REQUEST"
+  },
+  "$zconfig.checkAutoLaunchEnable": {
+   "channel": "check-auto-launch",
+   "type": "REQUEST"
+  },
+  "$zconfig.toggleAutoLaunch": {
+   "channel": "toggle-auto-launch",
+   "type": "REQUEST"
+  },
+  "$zconfig.updateScreenshotShortcut": {
+   "channel": "update-screenshot-shortcut",
+   "type": "REQUEST"
+  },
+  "$zconfig.updateThemeConfig": {
+   "channel": "update-theme-conf",
+   "type": "REQUEST"
+  },
+  "$zconfig.updateRemoteConfigs": {
+   "channel": "update-remote-configs",
+   "type": "NOTIFY"
+  },
+  "$zconfig.getThemeConfig": {
+   "channel": "get-theme-conf",
+   "type": "REQUEST"
+  },
+  "$zconfig.getZaloInstalledTime": {
+   "channel": "get-zalo-installed-time",
+   "type": "REQUEST"
+  },
+  "$zFileManager.isTrustPath": {
+   "channel": "is_trust_path",
+   "type": "REQUEST"
+  },
+  "$zFileManager.trustPathFromBlob": {
+   "channel": "trust_path_from_blob",
+   "type": "REQUEST"
+  },
+  "$zFileManager.requestFlushZLog": {
+   "channel": "request_flush_zlog",
+   "type": "NOTIFY"
+  },
+  "$zFileManager.setReadonlyFile": {
+   "channel": "set_readonly_file",
+   "type": "REQUEST"
+  },
+  "$zFileManager.verifyZaloPCHardlinkSupport": {
+   "channel": "verify_zalo_pc_hardlink_support",
+   "type": "REQUEST"
+  },
+  "$zFeatures.zaloCall.requestCompressedLogFile": {
+   "channel": "request-compressed-log-file",
+   "type": "REQUEST"
+  },
+  "$zFeatures.kikiAssistant.openOAuthWindow": {
+   "channel": "kiki-open-oauth-window",
+   "type": "REQUEST"
+  },
+  "$zFeatures.kikiAssistant.onOAuthCompleted": {
+   "channel": "kiki-oauth-completed",
+   "type": "SUBSCRIBE"
+  },
+  "$zFeatures.kikiAssistant.removeListenerOAuthCompleted": {
+   "channel": "kiki-remove-oauth-completed",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zFeatures.kikiAssistant.onOAuthFailed": {
+   "channel": "kiki-oauth-failed",
+   "type": "SUBSCRIBE"
+  },
+  "$zFeatures.kikiAssistant.removeListenerOAuthFailed": {
+   "channel": "kiki-remove-oauth-failed",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zFeatures.kikiAssistant.startCSPMonitor": {
+   "channel": "kiki-start-csp-monitor",
+   "type": "REQUEST"
+  },
+  "$zFeatures.kikiAssistant.stopCSPMonitor": {
+   "channel": "kiki-stop-csp-monitor",
+   "type": "REQUEST"
+  },
+  "$zFeatures.kikiAssistant.onCSPBlocked": {
+   "channel": "kiki-csp-blocked",
+   "type": "SUBSCRIBE"
+  },
+  "$zFeatures.kikiAssistant.removeListenerCSPBlocked": {
+   "channel": "kiki-remove-csp-blocked",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zFeatures.mainless.cancel": {
+   "channel": "cancel",
+   "type": "REQUEST"
+  },
+  "$zFeatures.mainless.execRaw": {
+   "channel": "exec_raw",
+   "type": "REQUEST"
+  },
+  "$zFeatures.mainless.exec": {
+   "channel": "exec",
+   "type": "REQUEST"
+  },
+  "$zFeatures.mainless.onRemoteEvents": {
+   "channel": "remote_events",
+   "type": "SUBSCRIBE"
+  },
+  "$zFeatures.activeDeactive.getIdleTime": {
+   "channel": "active-deactive:get-idle-time",
+   "type": "REQUEST"
+  },
+  "$zFeatures.activeDeactive.setup": {
+   "channel": "active-deactive:setup",
+   "type": "NOTIFY"
+  },
+  "$zFeatures.activeDeactive.createTimer": {
+   "channel": "active-deactive:create-timer",
+   "type": "NOTIFY"
+  },
+  "$zFeatures.activeDeactive.clearTimer": {
+   "channel": "active-deactive:clear-timer",
+   "type": "NOTIFY"
+  },
+  "$zFeatures.activeDeactive.onActiveFromBackground": {
+   "channel": "active-deactive:active",
+   "type": "SUBSCRIBE"
+  },
+  "$zFeatures.activeDeactive.onDeactiveFromBackground": {
+   "channel": "active-deactive:deactive",
+   "type": "SUBSCRIBE"
+  },
+  "$zFeatures.activeDeactive.offActiveFromBackground": {
+   "channel": "active-deactive:active",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zFeatures.activeDeactive.offDeactiveFromBackground": {
+   "channel": "active-deactive:deactive",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zFeatures.migrateDB.signalDoneFullMigrate": {
+   "channel": "migratedb:signal_done",
+   "type": "NOTIFY"
+  },
+  "$zFeatures.migrateDB.checkNeedWaitBackup": {
+   "channel": "migratedb:check_need_wait_bu",
+   "type": "REQUEST"
+  },
+  "$zFeatures.migrateDB.signalRestartAppToMigrate": {
+   "channel": "migratedb:signal_restart",
+   "type": "NOTIFY"
+  },
+  "$zFeatures.migrateDB.getMigrateLocalInfo": {
+   "channel": "get-migrate-local-info",
+   "type": "REQUEST"
+  },
+  "$zFeatures.migrateDB.updateMigrateLocalInfo": {
+   "channel": "update-migrate-local-info",
+   "type": "REQUEST"
+  },
+  "$zFeatures.migrateDB.devOnly_resetMigrateState": {
+   "channel": "dev-only-reset-migrate-state",
+   "type": "NOTIFY"
+  },
+  "$zFeatures.migrateDB.isMigrateFullDone": {
+   "channel": "is-migrate-full-done",
+   "type": "REQUEST"
+  },
+  "$zFeatures.transfer.notifyReceiveMediaMsgs": {
+   "channel": "noti-receive-media-msg",
+   "type": "NOTIFY"
+  },
+  "$zFeatures.syncDownload.onRequestTriggerAutoDownload": {
+   "channel": "trigger-auto-download",
+   "type": "SUBSCRIBE"
+  },
+  "$zFeatures.syncDownload.removeListenTriggerAutoDownload": {
+   "channel": "trigger-auto-download",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zFeatures.genThumb.writeSavePathFilePhoto": {
+   "channel": "gen-thumb_write-savepath-file-photo",
+   "type": "REQUEST"
+  },
+  "$zFeatures.zwalker.collectDirectoryStats": {
+   "channel": "zwalker-collect-dir-stats",
+   "type": "REQUEST"
+  },
+  "$zFeatures.zwalker.updateFileStats": {
+   "channel": "zwalker-update-file-stats",
+   "type": "REQUEST"
+  },
+  "$zFeatures.zwalker.deleteUnmarkedFiles": {
+   "channel": "zwalker-del-unmarked-files",
+   "type": "REQUEST"
+  },
+  "$zFeatures.zwalker.statUnmarkedFiles": {
+   "channel": "zwalker-stat-unmarked-files",
+   "type": "REQUEST"
+  },
+  "$zFeatures.zwalker.deleteEmptyFolders": {
+   "channel": "zwalker-delete-empty-folders",
+   "type": "REQUEST"
+  },
+  "$zFeatures.fileWalkerStream.startStream": {
+   "channel": "file-walker-stream-start",
+   "type": "REQUEST"
+  },
+  "$zFeatures.fileWalkerStream.ackStreamChunk": {
+   "channel": "file-walker-stream-ack",
+   "type": "RAW_SEND"
+  },
+  "$zFeatures.fileWalkerStream.cancelStream": {
+   "channel": "file-walker-stream-cancel",
+   "type": "REQUEST"
+  },
+  "$zFeatures.fileWalkerStream.buildInodeIndex": {
+   "channel": "file-walker-stream-build-index",
+   "type": "REQUEST"
+  },
+  "$zFeatures.fileWalkerStream.onStreamChunk": {
+   "channel": "file-walker-stream-chunk",
+   "type": "SUBSCRIBE"
+  },
+  "$zFeatures.fileWalkerStream.removeStreamChunk": {
+   "channel": "file-walker-stream-chunk",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zFeatures.fileWalkerStream.onStreamEnd": {
+   "channel": "file-walker-stream-end",
+   "type": "SUBSCRIBE"
+  },
+  "$zFeatures.fileWalkerStream.removeStreamEnd": {
+   "channel": "file-walker-stream-end",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zFeatures.fileWalkerStream.onStreamError": {
+   "channel": "file-walker-stream-error",
+   "type": "SUBSCRIBE"
+  },
+  "$zFeatures.fileWalkerStream.removeStreamError": {
+   "channel": "file-walker-stream-error",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zFeatures.ocr.recognize": {
+   "channel": "ocr_recognize",
+   "type": "REQUEST"
+  },
+  "$zFeatures.ocr.isSupported": {
+   "channel": "ocr_is-supported",
+   "type": "REQUEST"
+  },
+  "$zFeatures.ocr.prewarm": {
+   "channel": "ocr_prewarm",
+   "type": "REQUEST"
+  },
+  "$zFeatures.languageDetector.detect": {
+   "channel": "language-detector_detect",
+   "type": "REQUEST"
+  },
+  "$zFeatures.languageDetector.dominantLanguage": {
+   "channel": "language-detector_dominant-language",
+   "type": "REQUEST"
+  },
+  "$zFeatures.languageDetector.isSupported": {
+   "channel": "language-detector_is-supported",
+   "type": "REQUEST"
+  },
+  "$zFeatures.languageDetector.info": {
+   "channel": "language-detector_info",
+   "type": "REQUEST"
+  },
+  "$zMetric.sendMessage": {
+   "channel": "send-metrics",
+   "type": "NOTIFY"
+  },
+  "$zMetric.onMessage": {
+   "channel": "response-metrics",
+   "type": "SUBSCRIBE"
+  },
+  "$zcloud.getHeap": {
+   "channel": "gett-heap",
+   "type": "REQUEST"
+  },
+  "$zcloud.writeHeap": {
+   "channel": "write-heap",
+   "type": "NOTIFY"
+  },
+  "$zcloud.denoiseFile": {
+   "channel": "denoise-file",
+   "type": "REQUEST"
+  },
+  "$zcloud.noiseFile": {
+   "channel": "noise-file",
+   "type": "REQUEST"
+  },
+  "$zcloud.removeFile": {
+   "channel": "remove-file",
+   "type": "REQUEST"
+  },
+  "$zcloud.writeBufferToFile": {
+   "channel": "write-blob-to-file",
+   "type": "REQUEST"
+  },
+  "$zcloud.matchChecksum": {
+   "channel": "match-checksum",
+   "type": "REQUEST"
+  },
+  "$zcloud.cloneAndMatchChecksum": {
+   "channel": "clone-and-match-checksum",
+   "type": "REQUEST"
+  },
+  "$zcloud.AppendLog": {
+   "channel": "append-file",
+   "type": "REQUEST"
+  },
+  "$zMsgChannel.onChannelEstablished": {
+   "channel": "channel-established",
+   "type": "SUBSCRIBE"
+  },
+  "$zMsgChannel.removeListenChannelEstablished": {
+   "channel": "channel-established",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zMsgChannel.onChannelDisconnected": {
+   "channel": "channel-disconnected",
+   "type": "SUBSCRIBE"
+  },
+  "$zMsgChannel.removeListenChannelDisconnected": {
+   "channel": "channel-disconnected",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zMsgChannel.onChannelTerminated": {
+   "channel": "channel-terminated",
+   "type": "SUBSCRIBE"
+  },
+  "$zMsgChannel.removeListenChannelTerminated": {
+   "channel": "channel-terminated",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zMsgChannel.onReceiveTransferredPort": {
+   "channel": "port-transferred",
+   "type": "SUBSCRIBE"
+  },
+  "$zMsgChannel.removeListenReceiveTransferredPort": {
+   "channel": "port-transferred",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zMsgChannel.onReceiveTransferredPortV2": {
+   "channel": "port-transferred-v2",
+   "type": "SUBSCRIBE_V2"
+  },
+  "$zMsgChannel.removeListenReceiveTransferredPortV2": {
+   "channel": "port-transferred-v2",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zMsgChannel.notifyPortDelivered": {
+   "channel": "port-delivered",
+   "type": "NOTIFY"
+  },
+  "$zMsgChannel.requestOpenChannelTo": {
+   "channel": "open-channel-to",
+   "type": "NOTIFY"
+  },
+  "$zscript.notifyScriptConnected": {
+   "channel": "script-connected",
+   "type": "NOTIFY"
+  },
+  "$zscript.notifyScriptTerminated": {
+   "channel": "script-terminated",
+   "type": "NOTIFY"
+  },
+  "$zbackup.createBackup": {
+   "channel": "create-backup",
+   "type": "REQUEST"
+  },
+  "$zbackup.destroyBackup": {
+   "channel": "destroy-backup",
+   "type": "REQUEST"
+  },
+  "$zbackup.abortCreatingBackup": {
+   "channel": "abort-creating-backup",
+   "type": "REQUEST"
+  },
+  "$zbackup.enableCreatingBackup": {
+   "channel": "enable-creating-backup",
+   "type": "NOTIFY"
+  },
+  "$zbackup.disableCreatingBackup": {
+   "channel": "disable-creating-backup",
+   "type": "NOTIFY"
+  },
+  "$zbackup.restartAndRestoreBackup": {
+   "channel": "restart-and-restore-backup",
+   "type": "REQUEST"
+  },
+  "$zbackup.restartWithoutRestoringBackup": {
+   "channel": "restart-without-restoring-backup",
+   "type": "REQUEST"
+  },
+  "$zbackup.rejectCurrentBackup": {
+   "channel": "reject-current-backup",
+   "type": "NOTIFY"
+  },
+  "$zbackup.changeBuInterval": {
+   "channel": "change-bu-interval",
+   "type": "NOTIFY"
+  },
+  "$zbackup.onWriteLatestBackUpLog": {
+   "channel": "write-latest-back-up-log",
+   "type": "SUBSCRIBE"
+  },
+  "$zbackup.removeOnWriteLatestBackUpLog": {
+   "channel": "write-latest-back-up-log",
+   "type": "UNSUBSCRIBE"
+  },
+  "$zInAppPayment.openUrl": {
+   "channel": "open-in-app-payment",
+   "type": "REQUEST"
+  },
+  "$zInAppPayment.closeInAppPayment": {
+   "channel": "close-in-app-payment",
+   "type": "REQUEST"
+  },
+  "$zInAppPayment.onInAppWindowEvent": {
+   "channel": "event-in-app-payment",
+   "type": "SUBSCRIBE"
+  },
+  "$zInAppPayment.removeListenerInAppWindowEvent": {
+   "channel": "remove-event-in-app-payment",
+   "type": "UNSUBSCRIBE"
+  },
+  "$capp.launchCompactApp": {
+   "channel": "_electron_launch-compact-app",
+   "type": "REQUEST"
+  },
+  "$capp.getRelaunchState": {
+   "channel": "_electron_get-relaunch-state",
+   "type": "REQUEST"
+  },
+  "$zsqlitebw.ping": {
+   "channel": "SQLITE_BW/PING",
+   "type": "NOTIFY"
+  },
+  "$zsqlitebw.dispose": {
+   "channel": "SQLITE_BW/DISPOSE",
+   "type": "NOTIFY"
+  },
+  "$zsqlitebw.reload": {
+   "channel": "SQLITE_BW/RELOAD",
+   "type": "REQUEST"
+  },
+  "$zsafeStorage.execute": {
+   "channel": "zsafestorage-execute",
+   "type": "REQUEST"
+  },
+  "$zMigrateDrive.getEstimatedCopyTime": {
+   "channel": "GET_ESTIMATED_COPY_TIME",
+   "type": "REQUEST"
+  },
+  "$zMigrateDrive.writePathToRegistry": {
+   "channel": null,
+   "type": "REQUEST"
+  },
+  "$zMigrateDrive.getPathFromRegistry": {
+   "channel": null,
+   "type": "REQUEST"
+  },
+  "$zMigrateDrive.writeCurrentDrivePathToFile": {
+   "channel": "WRITE_CURRENT_DRIVE_PATH_TO_FILE",
+   "type": "REQUEST"
+  },
+  "$zMigrateDrive.getCurrentDrivePathFromFile": {
+   "channel": "GET_CURRENT_DRIVE_PATH_FROM_FILE",
+   "type": "REQUEST"
+  },
+  "$zTFModels.ss.initSSResource": {
+   "channel": "tf-models:ss:resource:init",
+   "type": "NOTIFY"
+  },
+  "$zTFModels.ss.getSticker2Score": {
+   "channel": "tf-models:ss:sticker-2-score:get",
+   "type": "REQUEST"
+  },
+  "$zTFModels.ss.setSticker2Score": {
+   "channel": "tf-models:ss:sticker-2-score:set",
+   "type": "REQUEST"
+  },
+  "$zTFModels.ss.getKwd2Sticker": {
+   "channel": "tf-models:ss:kwd-2-stickers:get",
+   "type": "REQUEST"
+  },
+  "$zTFModels.ss.setKwd2Sticker": {
+   "channel": "tf-models:ss:kwd-2-stickers:set",
+   "type": "REQUEST"
+  },
+  "$zTFModels.ss.getSSConfig": {
+   "channel": "tf-models:ss:config:get",
+   "type": "REQUEST"
+  },
+  "$zTFModels.ss.setSSConfig": {
+   "channel": "tf-models:ss:config:set",
+   "type": "REQUEST"
+  },
+  "$zTFModels.ss.getItem2Sticker": {
+   "channel": "tf-models:ss:item-2-sticker:get",
+   "type": "REQUEST"
+  },
+  "$zTFModels.ss.setItem2Sticker": {
+   "channel": "tf-models:ss:item-2-sticker:set",
+   "type": "REQUEST"
+  },
+  "$znetwork.startMonitor": {
+   "channel": "net-start-monitor",
+   "type": "NOTIFY"
+  },
+  "$znetwork.stopMonitor": {
+   "channel": "net-stop-monitor",
+   "type": "NOTIFY"
+  },
+  "$znetwork.onMonitorData": {
+   "channel": "net-on-monitor-data",
+   "type": "SUBSCRIBE"
+  },
+  "$znetwork.removeListenOnMonitorData": {
+   "channel": "net-on-monitor-data",
+   "type": "UNSUBSCRIBE"
+  },
+  "$znetwork.updateNetErrorConfig": {
+   "channel": "net-update-net-error-config",
+   "type": "NOTIFY"
+  },
+  "$znetwork.collectNetErrorInfo": {
+   "channel": "net-collect-net-error-info",
+   "type": "NOTIFY"
+  },
+  "$zprotocol.encryptWithKeychain": {
+   "channel": "zproto-encrypt-with-keychain",
+   "type": "REQUEST"
+  },
+  "$zprotocol.decryptWithKeychain": {
+   "channel": "zproto-decrypt-with-keychain",
+   "type": "REQUEST"
+  },
+  "$zprotocol.syncConfigToMain": {
+   "channel": "zproto-config-sync-to-main",
+   "type": "NOTIFY"
+  },
+  "$znoti.isSupported": {
+   "channel": "_noti_is-supported",
+   "type": "REQUEST"
+  },
+  "$znoti.createNotification": {
+   "channel": "_noti_create",
+   "type": "REQUEST"
+  },
+  "$znoti.closeNotification": {
+   "channel": "_noti_close",
+   "type": "REQUEST"
+  },
+  "$znoti.onNotificationClick": {
+   "channel": "_noti_on-click",
+   "type": "SUBSCRIBE"
+  },
+  "$znoti.removeListenNotificationClick": {
+   "channel": "_noti_on-click",
+   "type": "UNSUBSCRIBE"
+  },
+  "$znoti.onNotificationShow": {
+   "channel": "_noti_on-show",
+   "type": "SUBSCRIBE"
+  },
+  "$znoti.removeListenNotificationShow": {
+   "channel": "_noti_on-show",
+   "type": "UNSUBSCRIBE"
+  },
+  "$znoti.onNotificationClose": {
+   "channel": "_noti_on-close",
+   "type": "SUBSCRIBE"
+  },
+  "$znoti.removeListenNotificationClose": {
+   "channel": "_noti_on-close",
+   "type": "UNSUBSCRIBE"
+  }
+ },
+ "local": {
+  "$zcommon": {
+   "send": "ipcRenderer.send only if channel==\"show-photo-viewer\"",
+   "receive": "no-op (whitelist [\"\"])",
+   "remove": "no-op"
+  },
+  "$znode.fs": {
+   "statSync": "node fs.statSync (sync)",
+   "existsSync": "node fs.existsSync (sync)",
+   "accessSync": "node fs.accessSync (sync)",
+   "mkdirSync": "node fs.mkdirSync (sync)",
+   "unlinkSync": "node fs.unlinkSync (sync)",
+   "constants": "node fs.constants (object)",
+   "readdirSync": "node fs.readdirSync (sync)",
+   "stat": "node fs.stat (callback-style)",
+   "lstat": "node fs.lstat (callback-style)",
+   "mkdir": "node fs.mkdir (callback-style)",
+   "readdir": "node fs.readdir (callback-style)",
+   "unlink": "node fs.unlink (callback-style)",
+   "access": "node fs.access (callback-style)",
+   "rmdir": "node fs.rmdir (callback-style)",
+   "link": "node fs.link (callback-style)"
+  },
+  "$znode.fs.extra": {
+   "exists": "util.promisify(fs.exists) \u2192 Promise<bool>",
+   "constanst": "fs.constants (typo alias)"
+  },
+  "$znode.fsPromise": {
+   "stat": "fs.promises.stat",
+   "lstat": "fs.promises.lstat",
+   "mkdir": "fs.promises.mkdir",
+   "readdir": "fs.promises.readdir",
+   "unlink": "fs.promises.unlink",
+   "link": "fs.promises.link",
+   "access": "fs.promises.access",
+   "rmdir": "fs.promises.rmdir",
+   "rm": "fs.promises.rm"
+  },
+  "$znode.fsExtra": {
+   "copy": "fs-extra.copy (Promise, or callback if last arg is fn)",
+   "copySync": "fs-extra.copySync (sync)",
+   "move": "fs-extra.move (Promise, or callback if last arg is fn)",
+   "ensureDir": "fs-extra.ensureDir (Promise, or callback if last arg is fn)",
+   "ensureDirSync": "fs-extra.ensureDirSync (sync)",
+   "rename": "fs-extra.rename (Promise, or callback if last arg is fn)",
+   "renameSync": "fs-extra.renameSync (sync)",
+   "existsSync": "fs-extra.existsSync (sync)",
+   "statSync": "fs-extra.statSync (sync)",
+   "remove": "fs-extra.remove (Promise, or callback if last arg is fn)",
+   "removeSync": "fs-extra.removeSync (sync)"
+  },
+  "$znode.path": {
+   "basename": "node path.basename",
+   "delimiter": "node path.delimiter",
+   "dirname": "node path.dirname",
+   "extname": "node path.extname",
+   "format": "node path.format",
+   "isAbsolute": "node path.isAbsolute",
+   "join": "node path.join",
+   "normalize": "node path.normalize",
+   "parse": "node path.parse",
+   "posix": "node path.posix",
+   "relative": "node path.relative",
+   "resolve": "node path.resolve",
+   "sep": "node path.sep",
+   "toNamespacedPath": "node path.toNamespacedPath"
+  },
+  "$znode.shell": {
+   "openPath": "invoke(\"__shell__\",\"openPath\",p) \u2192 bool",
+   "showItemInFolder": "invoke(\"__shell__\",\"showItemInFolder\",p)"
+  },
+  "$znode.child_process": {
+   "spawn": "invoke(\"__child_process__\",\"spawn\",cmd,opts) (whitelisted cmds)",
+   "exec": "invoke(\"__child_process__\",\"exec\",cmd,opts)",
+   "execSync": "invoke(\"__child_process__\",\"execSync\",cmd,opts)"
+  },
+  "$znode.crypto": {
+   "constants": "crypto.constants",
+   "createCipheriv": "wrapper (update/final return ArrayBuffer; getAuthTag/setAuthTag)",
+   "createDecipheriv": "wrapper",
+   "randomBytes": "crypto.randomBytes \u2192 ArrayBuffer",
+   "createHash": "{update(),digest()} digest\u2192ArrayBuffer unless encoding",
+   "encrypt": "(input,algo,key,iv=0*16,opts{key,iv,input,output},authTag) one-shot",
+   "decrypt": "one-shot inverse",
+   "hash": "(data,algo,inputEnc,outEnc) \u2192 string|ArrayBuffer",
+   "publicEncrypt": "(key,data,inEnc=b64,outEnc=b64)",
+   "privateDecrypt": "(key,padding,data,opts)",
+   "generateKeyPairSync": "crypto.generateKeyPairSync"
+  },
+  "$znode.zlib": {
+   "gzip": "zlib.gzip (callback)"
+  },
+  "$znode.os": {
+   "hostname": "os.hostname()",
+   "networkInterfaces": "os.networkInterfaces()",
+   "platform": "os.platform()",
+   "release": "os.release()",
+   "cpus": "os.cpus()",
+   "uptime": "os.uptime()",
+   "homedir": "os.homedir()",
+   "type": "os.type()",
+   "arch": "os.arch()",
+   "totalmem": "os.totalmem()",
+   "freemem": "os.freemem()",
+   "EOL": "os.EOL"
+  },
+  "$znode.other": {
+   "nativelibs": "{asyncSqlite (UihA sqlite wrapper), ...require(\"../native/nativelibs\")} \u2014 native .node",
+   "admzip": "adm-zip",
+   "progressStream": "progress-stream",
+   "util.promisify": "util.promisify",
+   "rimraf": "rimraf",
+   "unusedFilename": "{sync,async}",
+   "url": "{format, pathToFileURL\u2192string}",
+   "diskSpace": "check-disk-space (exec df)",
+   "fastGlob": "fast-glob"
+  },
+  "$zelectron(local)": {
+   "getElectronStore": "(opts={name}) cached per name \u2192 electron-store/conf instance {get,set,has,reset,delete,clear,onDidChange,onDidAnyChange}; file <userData>/<name>.json; ctor does ipcRenderer.sendSync(\"electron-store-get-data\")"
+  },
+  "$zelectronNative": {
+   "getClipboardImage": "clipboard.readImage \u2192 {isEmpty,toJPEG,toPNG}",
+   "getClipboardText": "clipboard.readText",
+   "writeTextToClipboard": "(text,html?) clipboard.write/ writeText",
+   "writeImageToClipboard_deprecated": "img\u2192canvas\u2192jpeg\u2192clipboard.writeImage",
+   "writeImageToClipboard": "async (dataUrl)\u2192bool",
+   "availableClipboardFormats": "clipboard.availableFormats",
+   "readClipboard": "clipboard.read(fmt)",
+   "readClipboardBuffer": "clipboard.readBuffer(fmt)",
+   "lockWebframeZoom": "webFrame.setVisualZoomLevelLimits(1,1)",
+   "setZoomFactor": "webFrame.setZoomFactor",
+   "createPNGFromDataUrl": "nativeImage.createFromDataURL(u).toPNG().buffer",
+   "getResourceUsage": "webFrame.getResourceUsage",
+   "clearCache": "webFrame.clearCache",
+   "getAvailableHeapSize": "process.getHeapStatistics().totalAvailableSize"
+  },
+  "$zFileManager(local)": {
+   "saveSentryConfig": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getViewerkey": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getSentryConfig": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "writeActionLog": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getActionLog": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "removeActionLog": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getQosLog": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "removeQosLog": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "writeUptimeLog": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "readUptimeLog": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getPhotoWithPaths": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getDefaultExportFolder": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "pickExportFolder": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "initTempDBFolderPath": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "createTempDBFolder": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "setupWriteStreamBackup": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "achiveBackupFile": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "removeOutputZipTemp": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "renameExportZipFile": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "pickBackupFile": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "extractBackupFile": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "readBackUpData": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "removeDBBackupFile": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "copyBUResourceToApp": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "removeTempBUFolder": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "removeTempDBFolder": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "readZLog": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "truncateFileUpto": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "writeZLog": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "writeZLogBetween": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "scandirLog": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getExtraLogFiles": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getInstallSource": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "writeRecentId": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "cleanConvResourcePhoto": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getFileArrayBuffer": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getFileBlob": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getFileBlobURL": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "writeBufferToPath": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "writeBlobToPath": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "appendBufferToPath": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getFileInZip": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "svcReadPath": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "svcStatAsync": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "testChecksum": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getMd5LargeFileObject": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "readChunksArrayObject": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "trustBlob": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "readFileAsync": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "readLogRange": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "writeLogRange": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "cleanupLogFileDescriptors": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "initBinaryLogFile": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "sealCalfLog": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "readCalfActiveCompressed": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "mergeCalfLogGroup": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "createSync2BackupDir": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "cleanupBackupDir": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "createSync2BackupFilePath": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getSync2BackupFilePath": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getSync2BackupRootDir": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "writeSync2BackupData": "preload-local Node fs implementation (see spec \u00a71.3)",
+   "getPartialFingerprint": "preload-local Node fs implementation (see spec \u00a71.3)"
+  },
+  "$zpc": {
+   "zfile.getChecksum": "md5 of file (XOR-denoise for ZaloDownloads/fileNoise)",
+   "zfile.compareChecksum": "(path,md5)\u2192bool",
+   "zfile.readFileByChunksForUpload": "(key,fileInfo,{part,hash,secure}) \u2192 {chunks:DataView[],noChunk,tag?,checksumEncr?}",
+   "zprocess.getActiveResourcesInfo": "process.getActiveResourcesInfo()"
+  },
+  "$zFeatures.fileRes": {
+   "createDetachCleaner": "(path)\u2192{start({os}) spawns detached rm -rf / rmdir /s, stop(pid)}",
+   "createKeepDelDb": "lowdb-like JSON file at getZaloDirSync()/db_name, AES-256-CBC(userId) entries {loadConfig,setup,destroy,uninstall,connect,unshift,push,pop}"
+  },
+  "$zFeatures.libvips": {
+   "resizeImage": "(buf,w,h,opts,fmt) nativelibs.zimage().Image.thumbnail \u2192 Uint8Array (native)"
+  },
+  "$zFeatures.libjxl": {
+   "decodeToJpeg": "native zjxl",
+   "encodeJxl": "native zjxl",
+   "getJxlInfo": "native zjxl",
+   "moduleReady": "native zjxl",
+   "jxlDecompressMulti": "native zjxl"
+  },
+  "MetriczGlobal": {
+   "getProcessStats": "process heap/memory/cpu",
+   "getProcessMemory": "process.getProcessMemoryInfo().private*1024",
+   "startCPUMonitor": "",
+   "stopCPUMonitor": "",
+   "getCPUUsage": "",
+   "onCPUChange": "",
+   "removeCPUChangeListener": "",
+   "getArch": "\"arm64\" if cpus()[0].model ~ /^Apple M\\d+$/ else os.arch()"
+  },
+  "$zpreload": {
+   "triggerWindowLoadedEvent": "resolves the \"window loaded\" container used by SUBSCRIBE_V2 port delivery (also auto on window load)"
+  },
+  "$zenv": {
+   "isPreloaded": "true",
+   "isRenderer": "true"
+  }
+ },
+ "notes": {
+  "NOTIFY/REQUEST": "ipcRenderer.invoke(channel,...args) \u2192 Promise",
+  "REQUEST_SYNC": "ipcRenderer.sendSync \u2192 event.returnValue",
+  "RAW_SEND": "ipcRenderer.send",
+  "SUBSCRIBE": "ipcRenderer.on(channel, cb) \u2014 cb(event,...args)",
+  "UNSUBSCRIBE": "ipcRenderer.removeAllListeners(channel) \u2014 ignores the cb arg",
+  "PROVIDE": "ipcRenderer.handle polyfill: main sends \"__Z_IPC_INVOKE__\"(reqId,channel,...args); renderer replies \"__Z_IPC_INVOKED__\"(reqId,err,result)",
+  "ONCE": "once(channel,cb)",
+  "SUBSCRIBE_V2": "on(channel,(ev,...a)=>{key=++n; after window load postMessage({zChannelId:\"__Z_I2M__\",apiKey:channel,key},\"file://\",ev.ports); cb(key,ev,...a)})"
+ }
+}
